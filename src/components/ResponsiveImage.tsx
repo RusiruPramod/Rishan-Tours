@@ -1,4 +1,4 @@
-import React, { imgHTMLAttributes } from "react";
+import React, { imgHTMLAttributes, useState } from "react";
 import { getSrcSet, getMainSource, RESPONSIVE_SIZES, ImageName } from "@/lib/image-optimization";
 
 interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>, "src" | "srcSet" | "sizes"> {
@@ -15,6 +15,8 @@ interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>,
   className?: string;
   /** Custom sizes attribute (defaults to responsive sizes) */
   sizes?: string;
+  /** Default fallback image name (defaults to 'palm-beach') */
+  fallbackImage?: ImageName;
 }
 
 /**
@@ -25,7 +27,8 @@ interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>,
  * - Responsive breakpoints (480px, 768px, 1024px, 1200px)
  * - Lazy loading for non-critical images
  * - Proper alt text for accessibility
- * - Fallbacks for older browsers
+ * - Fallbacks for older browsers and missing images
+ * - Error handling with default image display
  *
  * @example
  * ```tsx
@@ -34,6 +37,7 @@ interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>,
  *   alt="Sigiriya Rock Fortress"
  *   loading="lazy"
  *   className="rounded-xl w-full object-cover"
+ *   fallbackImage="palm-beach"
  * />
  * ```
  */
@@ -45,17 +49,30 @@ const ResponsiveImage = React.forwardRef<HTMLImageElement, ResponsiveImageProps>
       loading = "lazy",
       className,
       sizes = RESPONSIVE_SIZES,
+      fallbackImage = "palm-beach" as ImageName,
       ...props
     },
     ref
   ) => {
-    // Get optimized image data
-    const srcSet = getSrcSet(imageName);
-    const mainSrc = getMainSource(imageName);
+    const [hasError, setHasError] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
+    // Use fallback image if primary image fails or is not found
+    const currentImageName = hasError ? fallbackImage : imageName;
+    const srcSet = getSrcSet(currentImageName);
+    const mainSrc = getMainSource(currentImageName);
+
+    // If even fallback image fails, show a placeholder gradient
     if (!srcSet || !mainSrc) {
-      console.error(`Failed to load image metadata for: ${imageName}`);
-      return null;
+      return (
+        <div
+          className={`${className} bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center`}
+          role="img"
+          aria-label={alt}
+        >
+          <span className="text-gray-500 text-sm">Image unavailable</span>
+        </div>
+      );
     }
 
     return (
@@ -68,6 +85,11 @@ const ResponsiveImage = React.forwardRef<HTMLImageElement, ResponsiveImageProps>
         loading={loading}
         className={className}
         decoding="async"
+        onError={() => {
+          console.error(`Failed to load image: ${imageName}, using fallback: ${fallbackImage}`);
+          setHasError(true);
+        }}
+        onLoad={() => setIsLoading(false)}
         {...props}
       />
     );

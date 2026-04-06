@@ -4,22 +4,22 @@
     "original_size_kb": 1068.31,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/elephant-480w.webp",
+        "path": "/assets/optimized/elephant-480w.webp",
         "size_kb": 67.42,
         "dimensions": "480x640"
       },
       "768w": {
-        "path": "src/assets/optimized/elephant-768w.webp",
+        "path": "/assets/optimized/elephant-768w.webp",
         "size_kb": 156.29,
         "dimensions": "768x1024"
       },
       "1024w": {
-        "path": "src/assets/optimized/elephant-1024w.webp",
+        "path": "/assets/optimized/elephant-1024w.webp",
         "size_kb": 250.51,
         "dimensions": "1024x1365"
       },
       "1200w": {
-        "path": "src/assets/optimized/elephant-1200w.webp",
+        "path": "/assets/optimized/elephant-1200w.webp",
         "size_kb": 319.74,
         "dimensions": "1200x1600"
       }
@@ -31,22 +31,22 @@
     "original_size_kb": 3069.3,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/galle-fort-480w.webp",
+        "path": "/assets/optimized/galle-fort-480w.webp",
         "size_kb": 30.92,
         "dimensions": "480x320"
       },
       "768w": {
-        "path": "src/assets/optimized/galle-fort-768w.webp",
+        "path": "/assets/optimized/galle-fort-768w.webp",
         "size_kb": 75.04,
         "dimensions": "768x512"
       },
       "1024w": {
-        "path": "src/assets/optimized/galle-fort-1024w.webp",
+        "path": "/assets/optimized/galle-fort-1024w.webp",
         "size_kb": 129.04,
         "dimensions": "1024x682"
       },
       "1200w": {
-        "path": "src/assets/optimized/galle-fort-1200w.webp",
+        "path": "/assets/optimized/galle-fort-1200w.webp",
         "size_kb": 172.16,
         "dimensions": "1200x800"
       }
@@ -58,22 +58,22 @@
     "original_size_kb": 1246.13,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/galle-library-480w.webp",
+        "path": "/assets/optimized/galle-library-480w.webp",
         "size_kb": 53.94,
         "dimensions": "480x720"
       },
       "768w": {
-        "path": "src/assets/optimized/galle-library-768w.webp",
+        "path": "/assets/optimized/galle-library-768w.webp",
         "size_kb": 147.49,
         "dimensions": "768x1152"
       },
       "1024w": {
-        "path": "src/assets/optimized/galle-library-1024w.webp",
+        "path": "/assets/optimized/galle-library-1024w.webp",
         "size_kb": 285.52,
         "dimensions": "1024x1537"
       },
       "1200w": {
-        "path": "src/assets/optimized/galle-library-1200w.webp",
+        "path": "/assets/optimized/galle-library-1200w.webp",
         "size_kb": 413.01,
         "dimensions": "1200x1801"
       }
@@ -85,12 +85,12 @@
     "original_size_kb": 582.97,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/lotus-tower-480w.webp",
+        "path": "/assets/optimized/lotus-tower-480w.webp",
         "size_kb": 24.16,
         "dimensions": "480x310"
       },
       "735w": {
-        "path": "src/assets/optimized/lotus-tower-original.webp",
+        "path": "/assets/optimized/lotus-tower-original.webp",
         "size_kb": 47.34,
         "dimensions": "735x475"
       }
@@ -102,22 +102,22 @@
     "original_size_kb": 117.5,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/mirissa-beach-480w.webp",
+        "path": "/assets/optimized/mirissa-beach-480w.webp",
         "size_kb": 12.16,
         "dimensions": "480x320"
       },
       "768w": {
-        "path": "src/assets/optimized/mirissa-beach-768w.webp",
+        "path": "/assets/optimized/mirissa-beach-768w.webp",
         "size_kb": 29.92,
         "dimensions": "768x512"
       },
       "1024w": {
-        "path": "src/assets/optimized/mirissa-beach-1024w.webp",
+        "path": "/assets/optimized/mirissa-beach-1024w.webp",
         "size_kb": 55.67,
         "dimensions": "1024x683"
       },
       "1200w": {
-        "path": "src/assets/optimized/mirissa-beach-1200w.webp",
+        "path": "/assets/optimized/mirissa-beach-1200w.webp",
         "size_kb": 76.18,
         "dimensions": "1200x800"
       }
@@ -129,22 +129,22 @@
     "original_size_kb": 917.05,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/nine-arch-bridge-real-480w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-real-480w.webp",
         "size_kb": 73.8,
         "dimensions": "480x720"
       },
       "768w": {
-        "path": "src/assets/optimized/nine-arch-bridge-real-768w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-real-768w.webp",
         "size_kb": 160.34,
         "dimensions": "768x1152"
       },
       "1024w": {
-        "path": "src/assets/optimized/nine-arch-bridge-real-1024w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-real-1024w.webp",
         "size_kb": 247.02,
         "dimensions": "1024x1536"
       },
       "1200w": {
-        "path": "src/assets/optimized/nine-arch-bridge-real-1200w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-real-1200w.webp",
         "size_kb": 311.07,
         "dimensions": "1200x1800"
       }
@@ -156,22 +156,22 @@
     "original_size_kb": 199.14,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/nine-arch-bridge-480w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-480w.webp",
         "size_kb": 30.33,
         "dimensions": "480x320"
       },
       "768w": {
-        "path": "src/assets/optimized/nine-arch-bridge-768w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-768w.webp",
         "size_kb": 71.67,
         "dimensions": "768x512"
       },
       "1024w": {
-        "path": "src/assets/optimized/nine-arch-bridge-1024w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-1024w.webp",
         "size_kb": 122.53,
         "dimensions": "1024x683"
       },
       "1200w": {
-        "path": "src/assets/optimized/nine-arch-bridge-1200w.webp",
+        "path": "/assets/optimized/nine-arch-bridge-1200w.webp",
         "size_kb": 157.88,
         "dimensions": "1200x800"
       }
@@ -183,22 +183,22 @@
     "original_size_kb": 2452.75,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/ocean-boats-480w.webp",
+        "path": "/assets/optimized/ocean-boats-480w.webp",
         "size_kb": 96.44,
         "dimensions": "480x854"
       },
       "768w": {
-        "path": "src/assets/optimized/ocean-boats-768w.webp",
+        "path": "/assets/optimized/ocean-boats-768w.webp",
         "size_kb": 231.92,
         "dimensions": "768x1366"
       },
       "1024w": {
-        "path": "src/assets/optimized/ocean-boats-1024w.webp",
+        "path": "/assets/optimized/ocean-boats-1024w.webp",
         "size_kb": 416.09,
         "dimensions": "1024x1822"
       },
       "1079w": {
-        "path": "src/assets/optimized/ocean-boats-original.webp",
+        "path": "/assets/optimized/ocean-boats-original.webp",
         "size_kb": 512.47,
         "dimensions": "1079x1920"
       }
@@ -210,22 +210,22 @@
     "original_size_kb": 1140.71,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/palm-beach-480w.webp",
+        "path": "/assets/optimized/palm-beach-480w.webp",
         "size_kb": 41.54,
         "dimensions": "480x360"
       },
       "768w": {
-        "path": "src/assets/optimized/palm-beach-768w.webp",
+        "path": "/assets/optimized/palm-beach-768w.webp",
         "size_kb": 96.85,
         "dimensions": "768x576"
       },
       "1024w": {
-        "path": "src/assets/optimized/palm-beach-1024w.webp",
+        "path": "/assets/optimized/palm-beach-1024w.webp",
         "size_kb": 164.78,
         "dimensions": "1024x768"
       },
       "1200w": {
-        "path": "src/assets/optimized/palm-beach-1200w.webp",
+        "path": "/assets/optimized/palm-beach-1200w.webp",
         "size_kb": 219.08,
         "dimensions": "1200x900"
       }
@@ -237,22 +237,22 @@
     "original_size_kb": 2823.34,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/sigiriya-aerial-480w.webp",
+        "path": "/assets/optimized/sigiriya-aerial-480w.webp",
         "size_kb": 32.24,
         "dimensions": "480x640"
       },
       "768w": {
-        "path": "src/assets/optimized/sigiriya-aerial-768w.webp",
+        "path": "/assets/optimized/sigiriya-aerial-768w.webp",
         "size_kb": 78.53,
         "dimensions": "768x1024"
       },
       "1024w": {
-        "path": "src/assets/optimized/sigiriya-aerial-1024w.webp",
+        "path": "/assets/optimized/sigiriya-aerial-1024w.webp",
         "size_kb": 141.58,
         "dimensions": "1024x1366"
       },
       "1200w": {
-        "path": "src/assets/optimized/sigiriya-aerial-1200w.webp",
+        "path": "/assets/optimized/sigiriya-aerial-1200w.webp",
         "size_kb": 202.7,
         "dimensions": "1200x1601"
       }
@@ -264,22 +264,22 @@
     "original_size_kb": 1118.04,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/sigiriya-480w.webp",
+        "path": "/assets/optimized/sigiriya-480w.webp",
         "size_kb": 56.0,
         "dimensions": "480x640"
       },
       "768w": {
-        "path": "src/assets/optimized/sigiriya-768w.webp",
+        "path": "/assets/optimized/sigiriya-768w.webp",
         "size_kb": 135.7,
         "dimensions": "768x1024"
       },
       "1024w": {
-        "path": "src/assets/optimized/sigiriya-1024w.webp",
+        "path": "/assets/optimized/sigiriya-1024w.webp",
         "size_kb": 229.28,
         "dimensions": "1024x1365"
       },
       "1200w": {
-        "path": "src/assets/optimized/sigiriya-1200w.webp",
+        "path": "/assets/optimized/sigiriya-1200w.webp",
         "size_kb": 304.33,
         "dimensions": "1200x1600"
       }
@@ -291,22 +291,22 @@
     "original_size_kb": 450.28,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/tea-plantation-480w.webp",
+        "path": "/assets/optimized/tea-plantation-480w.webp",
         "size_kb": 27.12,
         "dimensions": "480x270"
       },
       "768w": {
-        "path": "src/assets/optimized/tea-plantation-768w.webp",
+        "path": "/assets/optimized/tea-plantation-768w.webp",
         "size_kb": 67.69,
         "dimensions": "768x432"
       },
       "1024w": {
-        "path": "src/assets/optimized/tea-plantation-1024w.webp",
+        "path": "/assets/optimized/tea-plantation-1024w.webp",
         "size_kb": 124.66,
         "dimensions": "1024x576"
       },
       "1200w": {
-        "path": "src/assets/optimized/tea-plantation-1200w.webp",
+        "path": "/assets/optimized/tea-plantation-1200w.webp",
         "size_kb": 176.63,
         "dimensions": "1200x675"
       }
@@ -318,22 +318,22 @@
     "original_size_kb": 1156.55,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/temple-kandy-480w.webp",
+        "path": "/assets/optimized/temple-kandy-480w.webp",
         "size_kb": 30.56,
         "dimensions": "480x360"
       },
       "768w": {
-        "path": "src/assets/optimized/temple-kandy-768w.webp",
+        "path": "/assets/optimized/temple-kandy-768w.webp",
         "size_kb": 69.39,
         "dimensions": "768x576"
       },
       "1024w": {
-        "path": "src/assets/optimized/temple-kandy-1024w.webp",
+        "path": "/assets/optimized/temple-kandy-1024w.webp",
         "size_kb": 118.61,
         "dimensions": "1024x768"
       },
       "1200w": {
-        "path": "src/assets/optimized/temple-kandy-1200w.webp",
+        "path": "/assets/optimized/temple-kandy-1200w.webp",
         "size_kb": 160.11,
         "dimensions": "1200x900"
       }
@@ -345,22 +345,22 @@
     "original_size_kb": 1837.0,
     "variants": {
       "480w": {
-        "path": "src/assets/optimized/waterfall-friends-480w.webp",
+        "path": "/assets/optimized/waterfall-friends-480w.webp",
         "size_kb": 41.91,
         "dimensions": "480x320"
       },
       "768w": {
-        "path": "src/assets/optimized/waterfall-friends-768w.webp",
+        "path": "/assets/optimized/waterfall-friends-768w.webp",
         "size_kb": 90.87,
         "dimensions": "768x513"
       },
       "1024w": {
-        "path": "src/assets/optimized/waterfall-friends-1024w.webp",
+        "path": "/assets/optimized/waterfall-friends-1024w.webp",
         "size_kb": 136.93,
         "dimensions": "1024x684"
       },
       "1189w": {
-        "path": "src/assets/optimized/waterfall-friends-original.webp",
+        "path": "/assets/optimized/waterfall-friends-original.webp",
         "size_kb": 168.24,
         "dimensions": "1189x795"
       }

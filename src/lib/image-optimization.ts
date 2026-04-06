@@ -15,7 +15,10 @@ export function getSrcSet(imageName: ImageName): string {
   }
 
   const srcset = Object.entries(imageMetadata.variants)
-    .map(([size, data]) => `${data.path} ${size}`)
+    .map(([size, data]) => {
+      const url = new URL(data.path, import.meta.url).href;
+      return `${url} ${size}`;
+    })
     .join(", ");
 
   return srcset;
@@ -41,7 +44,7 @@ export function getMainSource(imageName: ImageName): string {
     return currentSize > prevSize ? current : prev;
   });
 
-  return largestData.path;
+  return new URL(largestData.path, import.meta.url).href;
 }
 
 /**

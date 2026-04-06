@@ -61,8 +61,10 @@ def optimize_image(img_path, output_dir=OPTIMIZED_DIR):
             resized.save(output_path, "WEBP", quality=QUALITY, method=6)
             
             file_size_kb = round(output_path.stat().st_size / 1024, 2)
+            # Use web-relative path for serving (not filesystem path)
+            web_path = f"/assets/optimized/{img_name}-{bp}w.webp"
             result["variants"][f"{bp}w"] = {
-                "path": str(output_path),
+                "path": web_path,
                 "size_kb": file_size_kb,
                 "dimensions": f"{bp}x{new_height}"
             }
@@ -85,8 +87,10 @@ def optimize_image(img_path, output_dir=OPTIMIZED_DIR):
             
         img_copy.save(output_path, "WEBP", quality=QUALITY, method=6)
         file_size_kb = round(output_path.stat().st_size / 1024, 2)
+        # Use web-relative path for serving (not filesystem path)
+        web_path = f"/assets/optimized/{img_name}-{bp}w.webp"
         result["variants"][f"{bp}w"] = {
-            "path": str(output_path),
+            "path": web_path,
             "size_kb": file_size_kb,
             "dimensions": f"{bp}x{int(original_height if bp == original_width else original_height * (bp / original_width))}"
         }

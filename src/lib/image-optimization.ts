@@ -15,7 +15,7 @@ export function getSrcSet(imageName: ImageName): string {
   }
 
   const srcset = Object.entries(imageMetadata.variants)
-    .map(([size, data]) => `${data.path.replace(/\\/g, "/")} ${size}`)
+    .map(([size, data]) => `${data.path} ${size}`)
     .join(", ");
 
   return srcset;
@@ -41,7 +41,7 @@ export function getMainSource(imageName: ImageName): string {
     return currentSize > prevSize ? current : prev;
   });
 
-  return largestData.path.replace(/\\/g, "/");
+  return largestData.path;
 }
 
 /**

@@ -1,25 +1,16 @@
-import sigiriya from "@/assets/sigiriya.jpg";
-import galleFort from "@/assets/galle-fort.jpg";
-import elephant from "@/assets/elephant.jpg";
-import oceanBoats from "@/assets/ocean-boats.jpg";
-import templeKandy from "@/assets/temple-kandy.jpg";
-import teaPlantation from "@/assets/tea-plantation.jpg";
-import waterfallFriends from "@/assets/waterfall-friends.jpg";
-import mirissa from "@/assets/mirissa-beach.jpg";
-import galleLibrary from "@/assets/galle-library.jpg";
-import nineArchBridge from "@/assets/nine-arch-bridge-real.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 
 const images = [
-  { src: sigiriya, alt: "Sigiriya Rock Fortress" },
-  { src: elephant, alt: "Wild elephants in Sri Lanka" },
-  { src: galleLibrary, alt: "Historic Galle Library, established 1832" },
-  { src: galleFort, alt: "Historic Galle Fort" },
-  { src: oceanBoats, alt: "Crystal clear waters of Sri Lanka" },
-  { src: nineArchBridge, alt: "Nine Arch Bridge, Ella" },
-  { src: templeKandy, alt: "Temple of the Tooth, Kandy" },
-  { src: teaPlantation, alt: "Tea plantations in hill country" },
-  { src: waterfallFriends, alt: "Travelers at a waterfall" },
-  { src: mirissa, alt: "Mirissa Beach, southern coast" },
+  { imageName: "sigiriya" as const, alt: "Sigiriya Rock Fortress" },
+  { imageName: "elephant" as const, alt: "Wild elephants in Sri Lanka" },
+  { imageName: "galle-library" as const, alt: "Historic Galle Library, established 1832" },
+  { imageName: "galle-fort" as const, alt: "Historic Galle Fort" },
+  { imageName: "ocean-boats" as const, alt: "Crystal clear waters of Sri Lanka" },
+  { imageName: "nine-arch-bridge-real" as const, alt: "Nine Arch Bridge, Ella" },
+  { imageName: "temple-kandy" as const, alt: "Temple of the Tooth, Kandy" },
+  { imageName: "tea-plantation" as const, alt: "Tea plantations in hill country" },
+  { imageName: "waterfall-friends" as const, alt: "Travelers at a waterfall" },
+  { imageName: "mirissa-beach" as const, alt: "Mirissa Beach, southern coast" },
 ];
 
 const Gallery = () => (
@@ -35,11 +26,11 @@ const Gallery = () => (
       <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {images.map((img, i) => (
           <div key={i} className="break-inside-avoid rounded-xl overflow-hidden group">
-            <img
-              src={img.src}
+            <ResponsiveImage
+              imageName={img.imageName}
               alt={img.alt}
-              className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
+              className="w-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
         ))}

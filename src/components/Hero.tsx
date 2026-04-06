@@ -1,13 +1,11 @@
 import { useState, useEffect, useCallback } from "react";
-import sigiriya from "@/assets/sigiriya.jpg";
-import palmBeach from "@/assets/palm-beach.jpg";
-import sigiriyaAerial from "@/assets/sigiriya-aerial.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { MessageCircle, ArrowRight } from "lucide-react";
 
 const slides = [
-  { src: sigiriya, alt: "Sigiriya Rock Fortress, Sri Lanka" },
-  { src: palmBeach, alt: "Tropical palm beach, Sri Lanka" },
-  { src: sigiriyaAerial, alt: "Aerial view of Sigiriya Rock Fortress" },
+  { imageName: "sigiriya" as const, alt: "Sigiriya Rock Fortress, Sri Lanka" },
+  { imageName: "palm-beach" as const, alt: "Tropical palm beach, Sri Lanka" },
+  { imageName: "sigiriya-aerial" as const, alt: "Aerial view of Sigiriya Rock Fortress" },
 ];
 
 const Hero = () => {
@@ -25,14 +23,14 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {slides.map((slide, i) => (
-        <img
+        <ResponsiveImage
           key={i}
-          src={slide.src}
+          imageName={slide.imageName}
           alt={slide.alt}
+          loading={i === 0 ? "eager" : "lazy"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             i === current ? "opacity-100" : "opacity-0"
           }`}
-          loading={i === 0 ? "eager" : "lazy"}
         />
       ))}
       <div className="absolute inset-0 bg-foreground/45" />

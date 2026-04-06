@@ -1,18 +1,13 @@
-import lotusTower from "@/assets/lotus-tower.jpg";
-import templeKandy from "@/assets/temple-kandy.jpg";
-import sigiriya from "@/assets/sigiriya.jpg";
-import teaPlantation from "@/assets/tea-plantation.jpg";
-import mirissa from "@/assets/mirissa-beach.jpg";
-import nineArch from "@/assets/nine-arch-bridge.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { ArrowRight } from "lucide-react";
 
 const tours = [
-  { img: lotusTower, title: "Colombo Day Tour", duration: "1 Day", desc: "Explore the vibrant capital — Lotus Tower, Gangaramaya Temple, Pettah markets & coastal views." },
-  { img: templeKandy, title: "Kandy Day Tour", duration: "1 Day", desc: "Temple of the Tooth, Royal Botanical Gardens, traditional dance show & scenic lake walk." },
-  { img: sigiriya, title: "Sigiriya Day Tour", duration: "1 Day", desc: "Climb the ancient Lion Rock fortress, visit Dambulla Cave Temple & enjoy village safaris." },
-  { img: nineArch, title: "Ella & Hill Country", duration: "2–3 Days", desc: "Nine Arch Bridge, Little Adam's Peak, tea plantations & the famous train ride." },
-  { img: mirissa, title: "Southern Coast Tour", duration: "3–5 Days", desc: "Galle Fort, Mirissa whale watching, Unawatuna beaches & turtle hatcheries." },
-  { img: teaPlantation, title: "Grand Island Tour", duration: "7–12 Days", desc: "The complete Sri Lanka experience — culture, wildlife, beaches & hill country combined." },
+  { imageName: "lotus-tower" as const, title: "Colombo Day Tour", duration: "1 Day", desc: "Explore the vibrant capital — Lotus Tower, Gangaramaya Temple, Pettah markets & coastal views." },
+  { imageName: "temple-kandy" as const, title: "Kandy Day Tour", duration: "1 Day", desc: "Temple of the Tooth, Royal Botanical Gardens, traditional dance show & scenic lake walk." },
+  { imageName: "sigiriya" as const, title: "Sigiriya Day Tour", duration: "1 Day", desc: "Climb the ancient Lion Rock fortress, visit Dambulla Cave Temple & enjoy village safaris." },
+  { imageName: "nine-arch-bridge" as const, title: "Ella & Hill Country", duration: "2–3 Days", desc: "Nine Arch Bridge, Little Adam's Peak, tea plantations & the famous train ride." },
+  { imageName: "mirissa-beach" as const, title: "Southern Coast Tour", duration: "3–5 Days", desc: "Galle Fort, Mirissa whale watching, Unawatuna beaches & turtle hatcheries." },
+  { imageName: "tea-plantation" as const, title: "Grand Island Tour", duration: "7–12 Days", desc: "The complete Sri Lanka experience — culture, wildlife, beaches & hill country combined." },
 ];
 
 const Tours = () => (
@@ -30,11 +25,11 @@ const Tours = () => (
         {tours.map((t) => (
           <div key={t.title} className="group rounded-2xl overflow-hidden bg-background border border-border hover:shadow-lg transition-shadow">
             <div className="overflow-hidden aspect-[16/10]">
-              <img
-                src={t.img}
+              <ResponsiveImage
+                imageName={t.imageName}
                 alt={t.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
             <div className="p-6">

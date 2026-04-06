@@ -1,4 +1,4 @@
-import galleFort from "@/assets/galle-fort.jpg";
+import ResponsiveImage from "@/components/ResponsiveImage";
 import { Award, Users, Globe, Heart } from "lucide-react";
 
 const stats = [
@@ -13,11 +13,11 @@ const About = () => (
     <div className="container mx-auto px-6">
       <div className="grid md:grid-cols-2 gap-16 items-center">
         <div className="relative">
-          <img
-            src={galleFort}
+          <ResponsiveImage
+            imageName="galle-fort"
             alt="Galle Fort coastline, Sri Lanka"
-            className="rounded-2xl w-full object-cover aspect-[4/3]"
             loading="lazy"
+            className="rounded-2xl w-full object-cover aspect-[4/3]"
           />
           <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground rounded-2xl p-6 shadow-lg hidden md:block">
             <p className="text-3xl font-bold">11+</p>

@@ -1,4 +1,5 @@
 import { Car, Map, Plane, Calendar } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const services = [
   {
@@ -23,31 +24,37 @@ const services = [
   },
 ];
 
-const Services = () => (
-  <section id="services" className="py-24 md:py-32 bg-section-alt">
-    <div className="container mx-auto px-6 text-center">
-      <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">What We Offer</p>
-      <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
-      <p className="text-muted-foreground max-w-xl mx-auto mb-16">
-        Everything you need for a seamless Sri Lanka experience, handled with care and professionalism.
-      </p>
+const Services = () => {
+  const { ref, isVisible } = useScrollReveal();
+  return (
+    <section id="services" className="py-24 md:py-32 bg-section-alt" ref={ref}>
+      <div className="container mx-auto px-6 text-center">
+        <div className={`transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+          <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">What We Offer</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto mb-16">
+            Everything you need for a seamless Sri Lanka experience, handled with care and professionalism.
+          </p>
+        </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((s) => (
-          <div
-            key={s.title}
-            className="bg-background rounded-2xl p-8 text-left shadow-sm hover:shadow-md transition-shadow group"
-          >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((s, i) => (
+            <div
+              key={s.title}
+              className={`bg-background rounded-2xl p-8 text-left shadow-sm hover:shadow-md transition-all duration-700 group ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}
+              style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}
+            >
             <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
               <s.icon size={22} className="text-accent-foreground group-hover:text-primary-foreground transition-colors" />
             </div>
             <h3 className="text-lg font-semibold text-foreground mb-2">{s.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Services;

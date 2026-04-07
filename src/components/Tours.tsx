@@ -16,7 +16,7 @@ const Tours = () => {
   return (
     <section id="tours" className="py-24 md:py-32" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+        <div className={`text-center mb-16 will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
           <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">Tour Packages</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Popular Tours</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -26,7 +26,7 @@ const Tours = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {tours.map((t, i) => (
-            <div key={t.title} className={`group rounded-2xl overflow-hidden bg-background border border-border hover:shadow-lg transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
+            <div key={t.title} className={`group rounded-2xl overflow-hidden bg-background border border-border hover:shadow-lg will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
             <div className="overflow-hidden aspect-[16/10]">
               <ResponsiveImage
                 imageName={t.imageName}

@@ -15,7 +15,7 @@ const About = () => {
     <section id="about" className="py-24 md:py-32" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <div className={`relative transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+          <div className={`relative will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
           <ResponsiveImage
             imageName="galle-fort"
             alt="Galle Fort coastline, Sri Lanka"
@@ -28,7 +28,7 @@ const About = () => {
           </div>
         </div>
 
-          <div className={`transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: isVisible ? "100ms" : "0ms" }}>
+          <div className={`will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? "100ms" : "0ms" }}>
             <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">About Us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
               Your Journey, Our Passion
@@ -42,7 +42,7 @@ const About = () => {
 
             <div className="grid grid-cols-2 gap-4">
               {stats.map((s, i) => (
-                <div key={s.label} className={`bg-secondary rounded-xl p-4 text-center transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: isVisible ? `${200 + i * 80}ms` : "0ms" }}>
+                <div key={s.label} className={`bg-secondary rounded-xl p-4 text-center will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${200 + i * 80}ms` : "0ms" }}>
                   <s.icon className="mx-auto text-primary mb-2" size={22} />
                   <p className="text-2xl font-bold text-foreground">{s.value}</p>
                   <p className="text-xs text-muted-foreground">{s.label}</p>

@@ -19,7 +19,7 @@ const Gallery = () => {
   return (
     <section id="gallery" className="py-24 md:py-32" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+        <div className={`text-center mb-16 will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
           <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">Gallery</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Discover Sri Lanka</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -28,7 +28,7 @@ const Gallery = () => {
         </div>
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {images.map((img, i) => (
-            <div key={i} className={`break-inside-avoid rounded-xl overflow-hidden group transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: isVisible ? `${i * 50}ms` : "0ms" }}>
+            <div key={i} className={`break-inside-avoid rounded-xl overflow-hidden group will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 50}ms` : "0ms" }}>
               <ResponsiveImage
                 imageName={img.imageName}
                 alt={img.alt}

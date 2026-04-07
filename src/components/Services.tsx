@@ -29,7 +29,7 @@ const Services = () => {
   return (
     <section id="services" className="py-24 md:py-32 bg-section-alt" ref={ref}>
       <div className="container mx-auto px-6 text-center">
-        <div className={`transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+        <div className={`will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
           <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">What We Offer</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
           <p className="text-muted-foreground max-w-xl mx-auto mb-16">
@@ -41,7 +41,7 @@ const Services = () => {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className={`bg-background rounded-2xl p-8 text-left shadow-sm hover:shadow-md transition-all duration-700 group ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}
+              className={`bg-background rounded-2xl p-8 text-left shadow-sm hover:shadow-md will-animate transition-all duration-700 group ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}
               style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}
             >
             <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

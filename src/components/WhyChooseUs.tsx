@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
   return (
     <section className="py-24 md:py-32 bg-section-alt" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+        <div className={`text-center mb-16 will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
           <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">Why Us</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Choose Us</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {reasons.map((r, i) => (
-            <div key={r.title} className={`text-center p-6 transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}>
+            <div key={r.title} className={`text-center p-6 will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}>
               <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
                 <r.icon size={24} className="text-primary" />
               </div>

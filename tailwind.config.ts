@@ -75,19 +75,65 @@ export default {
           to: { height: "0" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          "0%": { 
+            opacity: "0", 
+            transform: "translate3d(0, 30px, 0)"
+          },
+          "100%": { 
+            opacity: "1", 
+            transform: "translate3d(0, 0, 0)"
+          },
         },
         "fade-in": {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "slide-in-left": {
+          "0%": {
+            opacity: "0",
+            transform: "translate3d(-30px, 0, 0)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate3d(0, 0, 0)"
+          },
+        },
+        "slide-in-right": {
+          "0%": {
+            opacity: "0",
+            transform: "translate3d(30px, 0, 0)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate3d(0, 0, 0)"
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.8s ease-out forwards",
-        "fade-in": "fade-in 0.6s ease-out forwards",
+        "fade-up": "fade-up 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+        "fade-in": "fade-in 0.5s ease-out forwards",
+        "slide-in-left": "slide-in-left 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+        "slide-in-right": "slide-in-right 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+      },
+      transitionDuration: {
+        "0": "0ms",
+        "75": "75ms",
+        "100": "100ms",
+        "150": "150ms",
+        "200": "200ms",
+        "300": "300ms",
+        "400": "400ms",
+        "500": "500ms",
+        "600": "600ms",
+        "700": "700ms",
+        "800": "800ms",
+        "900": "900ms",
+        "1000": "1000ms",
+      },
+      translate: {
+        "y-30": "0 30px",
       },
     },
   },

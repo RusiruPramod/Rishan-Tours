@@ -33,7 +33,7 @@ const Reviews = () => {
   return (
     <section id="reviews" className="py-24 md:py-32" ref={ref}>
       <div className="container mx-auto px-6">
-        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`}>
+        <div className={`text-center mb-16 will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
           <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">Testimonials</p>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">What Travelers Say</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
@@ -42,7 +42,7 @@ const Reviews = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((r, i) => (
-            <div key={r.name} className={`bg-secondary rounded-2xl p-6 flex flex-col transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
+            <div key={r.name} className={`bg-secondary rounded-2xl p-6 flex flex-col will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: r.rating }).map((_, i) => (
                   <Star key={i} size={16} className="fill-gold text-gold" />

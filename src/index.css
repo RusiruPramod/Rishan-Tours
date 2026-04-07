@@ -69,8 +69,36 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* GPU Acceleration & Performance Utilities */
+  .will-animate {
+    will-change: transform, opacity;
+  }
+
+  .gpu-accelerate {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  .smooth-scroll {
+    scroll-behavior: smooth;
+  }
+
+  /* Reduce animation for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }

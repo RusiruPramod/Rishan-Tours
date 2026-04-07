@@ -1,52 +1,27 @@
-import metadata from "@/assets/optimized/metadata.json";
-
-export type ImageName = keyof typeof metadata;
-
 /**
- * Generates srcset string for responsive images
- * @param imageName - Name of image without extension (e.g., 'sigiriya')
- * @returns srcset string for use in img tags
+ * Valid image names available in /assets/ folder
  */
-export function getSrcSet(imageName: ImageName): string {
-  const imageMetadata = metadata[imageName];
-  if (!imageMetadata) {
-    console.warn(`Image metadata not found for: ${imageName}`);
-    return "";
-  }
-
-  // Use original image for image display
-  const originalPath = imageMetadata.original.replace(/\\/g, "/").replace("src", "");
-  return originalPath;
-}
+export type ImageName = 
+  | "elephant"
+  | "galle-fort"
+  | "galle-library"
+  | "lotus-tower"
+  | "mirissa-beach"
+  | "nine-arch-bridge-real"
+  | "nine-arch-bridge"
+  | "ocean-boats"
+  | "palm-beach"
+  | "sigiriya-aerial"
+  | "sigiriya"
+  | "tea-plantation"
+  | "temple-kandy"
+  | "waterfall-friends";
 
 /**
- * Gets the largest (fallback) image source
+ * Gets the image source path from /assets/ folder
  * @param imageName - Name of image without extension
- * @returns path to the original JPG image
+ * @returns path to the JPG image
  */
 export function getMainSource(imageName: ImageName): string {
-  const imageMetadata = metadata[imageName];
-  if (!imageMetadata) {
-    console.warn(`Image metadata not found for: ${imageName}`);
-    return "";
-  }
-
-  // Use original image path
-  const originalPath = imageMetadata.original.replace(/\\/g, "/").replace("src", "");
-  return originalPath;
+  return `/assets/${imageName}.jpg`;
 }
-
-/**
- * Gets all metadata for an image
- * @param imageName - Name of image without extension
- * @returns Image metadata including dimensions and file sizes
- */
-export function getImageMetadata(imageName: ImageName) {
-  return metadata[imageName];
-}
-
-/**
- * Generates sizes attribute for responsive loading
- * Commonly used sizes attribute for Tailwind breakpoints
- */
-export const RESPONSIVE_SIZES = "(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 1200px";

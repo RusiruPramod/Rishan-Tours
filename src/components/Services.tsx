@@ -41,7 +41,7 @@ const Services = () => {
           {services.map((s, i) => (
             <div
               key={s.title}
-              className={`bg-background rounded-2xl p-8 text-left shadow-sm hover:shadow-md will-animate transition-all duration-700 group ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}
+              className={`bg-background rounded-2xl p-8 text-left shadow-sm hover:shadow-md will-animate transition-all duration-700 group ${isVisible ? (i % 2 === 0 ? "animate-slide-in-left" : "animate-slide-in-right") : "opacity-0 translate-y-30"}`}
               style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}
             >
             <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-5 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">

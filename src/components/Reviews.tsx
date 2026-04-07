@@ -42,7 +42,7 @@ const Reviews = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reviews.map((r, i) => (
-            <div key={r.name} className={`bg-secondary rounded-2xl p-6 flex flex-col will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
+            <div key={r.name} className={`bg-secondary rounded-2xl p-6 flex flex-col will-animate transition-all duration-700 ${isVisible ? "animate-bounce-in" : "opacity-0 scale-90"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: r.rating }).map((_, i) => (
                   <Star key={i} size={16} className="fill-gold text-gold" />

@@ -26,7 +26,7 @@ const Tours = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {tours.map((t, i) => (
-            <div key={t.title} className={`group rounded-2xl overflow-hidden bg-background border border-border hover:shadow-lg will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
+            <div key={t.title} className={`group rounded-2xl overflow-hidden bg-background border border-border hover:shadow-lg will-animate transition-all duration-700 ${isVisible ? (i % 2 === 0 ? "animate-fade-up" : "animate-zoom-in") : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 100}ms` : "0ms" }}>
             <div className="overflow-hidden aspect-[16/10]">
               <ResponsiveImage
                 imageName={t.imageName}

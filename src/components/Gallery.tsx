@@ -28,7 +28,7 @@ const Gallery = () => {
         </div>
         <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {images.map((img, i) => (
-            <div key={i} className={`break-inside-avoid rounded-xl overflow-hidden group will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 50}ms` : "0ms" }}>
+            <div key={i} className={`break-inside-avoid rounded-xl overflow-hidden group will-animate transition-all duration-700 ${isVisible ? "animate-zoom-in" : "opacity-0 scale-95"}`} style={{ transitionDelay: isVisible ? `${i * 50}ms` : "0ms" }}>
               <ResponsiveImage
                 imageName={img.imageName}
                 alt={img.alt}

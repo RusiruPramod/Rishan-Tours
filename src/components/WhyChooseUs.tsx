@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {reasons.map((r, i) => (
-            <div key={r.title} className={`text-center p-6 will-animate transition-all duration-700 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}>
+            <div key={r.title} className={`text-center p-6 will-animate transition-all duration-700 ${isVisible ? "animate-scale-in" : "opacity-0 scale-90"}`} style={{ transitionDelay: isVisible ? `${i * 80}ms` : "0ms" }}>
               <div className="w-14 h-14 rounded-full bg-accent flex items-center justify-center mx-auto mb-4">
                 <r.icon size={24} className="text-primary" />
               </div>

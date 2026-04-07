@@ -31,7 +31,7 @@ const About = () => (
             Your Journey, Our Passion
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            I'm <strong className="text-foreground">Rishan</strong>, founder of Sri Lanka Private Drivers & Tours. What started over 11 years ago as a humble driving service has grown into a trusted tourism business serving travelers from France, Germany, Russia, Austria, and many more countries.
+            I'm <strong className="text-foreground">Rishan</strong>, founder of Rishan Tours. What started over 11 years ago as a humble driving service has grown into a trusted tourism business serving travelers from France, Germany, Russia, Austria, and many more countries.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
             Every tour is personal. I believe in honest guidance, fair prices, and creating authentic experiences — from hidden village trails to the most iconic landmarks of Sri Lanka.

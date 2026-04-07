@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto px-6 py-16">
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <h3 className="text-lg font-semibold mb-4">Sri Lanka Private Drivers & Tours</h3>
+          <h3 className="text-lg font-semibold mb-4">Rishan Tours</h3>
           <p className="text-sm text-primary-foreground/70 leading-relaxed">
             Your trusted partner for personalized Sri Lanka travel experiences since 2013.
           </p>
@@ -47,7 +47,7 @@ const Footer = () => (
       </div>
       <div className="border-t border-primary-foreground/10 mt-12 pt-8 text-center">
         <p className="text-sm text-primary-foreground/50">
-          © {new Date().getFullYear()} Sri Lanka Private Drivers & Tours. All rights reserved.
+          © {new Date().getFullYear()} Rishan Tours. All rights reserved.
         </p>
       </div>
     </div>

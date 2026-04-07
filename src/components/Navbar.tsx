@@ -31,7 +31,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#home" className={`text-lg font-semibold tracking-tight transition-colors ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
-          Sri Lanka Private Drivers
+          Rishan Tours
         </a>
 
         <div className="hidden md:flex items-center gap-8">

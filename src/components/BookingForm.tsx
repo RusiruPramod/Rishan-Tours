@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Send, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const tourTypes = [
   "Colombo Day Tour",
@@ -33,11 +34,13 @@ const BookingForm = () => {
   const update = (field: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
 
+  const { ref, isVisible } = useScrollReveal();
+
   return (
-    <section id="booking" className="py-24 md:py-32 bg-section-alt">
+    <section id="booking" className="py-24 md:py-32 bg-section-alt" ref={ref}>
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
+          <div className={`text-center mb-12 will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`}>
             <p className="text-sm font-medium text-primary tracking-widest uppercase mb-3">Book Now</p>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Plan Your Trip</h2>
             <p className="text-muted-foreground">
@@ -45,7 +48,7 @@ const BookingForm = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 shadow-sm space-y-5">
+          <form onSubmit={handleSubmit} className={`bg-background rounded-2xl p-8 shadow-sm space-y-5 will-animate transition-all duration-600 ${isVisible ? "animate-fade-up" : "opacity-0 translate-y-30"}`} style={{ transitionDelay: isVisible ? "100ms" : "0ms" }}>
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1.5">Full Name</label>

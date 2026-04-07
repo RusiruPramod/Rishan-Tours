@@ -14,19 +14,15 @@ export function getSrcSet(imageName: ImageName): string {
     return "";
   }
 
-  const srcset = Object.entries(imageMetadata.variants)
-    .map(([size, data]) => {
-      return `${data.path} ${size}`;
-    })
-    .join(", ");
-
-  return srcset;
+  // Use original image for image display
+  const originalPath = imageMetadata.original.replace(/\\/g, "/").replace("src", "");
+  return originalPath;
 }
 
 /**
  * Gets the largest (fallback) image source
  * @param imageName - Name of image without extension
- * @returns path to the largest WebP variant
+ * @returns path to the original JPG image
  */
 export function getMainSource(imageName: ImageName): string {
   const imageMetadata = metadata[imageName];
@@ -35,15 +31,9 @@ export function getMainSource(imageName: ImageName): string {
     return "";
   }
 
-  // Find the largest variant
-  const variants = Object.entries(imageMetadata.variants);
-  const [, largestData] = variants.reduce((prev, current) => {
-    const prevSize = parseInt(prev[0]);
-    const currentSize = parseInt(current[0]);
-    return currentSize > prevSize ? current : prev;
-  });
-
-  return largestData.path;
+  // Use original image path
+  const originalPath = imageMetadata.original.replace(/\\/g, "/").replace("src", "");
+  return originalPath;
 }
 
 /**

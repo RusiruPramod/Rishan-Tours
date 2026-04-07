@@ -1,7 +1,7 @@
 import React, { imgHTMLAttributes, useState } from "react";
-import { getSrcSet, getMainSource, RESPONSIVE_SIZES, ImageName } from "@/lib/image-optimization";
+import { getMainSource, ImageName } from "@/lib/image-optimization";
 
-interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>, "src" | "srcSet" | "sizes"> {
+interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>, "src"> {
   /** Image name without extension (e.g., 'sigiriya', 'galle-fort') */
   imageName: ImageName;
   /** Alt text (required for accessibility) */
@@ -13,8 +13,6 @@ interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>,
   height?: number;
   /** Additional className */
   className?: string;
-  /** Custom sizes attribute (defaults to responsive sizes) */
-  sizes?: string;
   /** Default fallback image name (defaults to 'palm-beach') */
   fallbackImage?: ImageName;
 }
@@ -23,11 +21,10 @@ interface ResponsiveImageProps extends Omit<imgHTMLAttributes<HTMLImageElement>,
  * ResponsiveImage Component
  *
  * Automatically handles:
- * - WebP format with proper srcset
- * - Responsive breakpoints (480px, 768px, 1024px, 1200px)
+ * - Original JPG image display
  * - Lazy loading for non-critical images
  * - Proper alt text for accessibility
- * - Fallbacks for older browsers and missing images
+ * - Fallbacks for missing images
  * - Error handling with default image display
  *
  * @example
@@ -48,7 +45,6 @@ const ResponsiveImage = React.forwardRef<HTMLImageElement, ResponsiveImageProps>
       alt,
       loading = "lazy",
       className,
-      sizes = RESPONSIVE_SIZES,
       fallbackImage = "palm-beach" as ImageName,
       ...props
     },
@@ -59,11 +55,10 @@ const ResponsiveImage = React.forwardRef<HTMLImageElement, ResponsiveImageProps>
 
     // Use fallback image if primary image fails or is not found
     const currentImageName = hasError ? fallbackImage : imageName;
-    const srcSet = getSrcSet(currentImageName);
     const mainSrc = getMainSource(currentImageName);
 
     // If even fallback image fails, show a placeholder gradient
-    if (!srcSet || !mainSrc) {
+    if (!mainSrc) {
       return (
         <div
           className={`${className} bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center`}
@@ -79,8 +74,6 @@ const ResponsiveImage = React.forwardRef<HTMLImageElement, ResponsiveImageProps>
       <img
         ref={ref}
         src={mainSrc}
-        srcSet={srcSet}
-        sizes={sizes}
         alt={alt}
         loading={loading}
         className={className}
